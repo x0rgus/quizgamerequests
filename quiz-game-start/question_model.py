@@ -1,7 +1,8 @@
 from data import *
 import random
-
-# my method
+import requests
+URL = "https://opentdb.com/api.php?amount=10"
+# Previous method
 class QuestionConstructor():
 
     def __init__(self):
@@ -9,8 +10,8 @@ class QuestionConstructor():
         self.text = self.question["text"]
         self.answer = self.question["answer"]
 
-# course suggested method
 class QuestionBankConstructor:
     def __init__(self, q_text, q_answer):
         self.text = q_text
         self.answer = q_answer
+
